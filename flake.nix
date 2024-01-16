@@ -30,9 +30,6 @@
               inherit wordpress wordpress_SQLitePlugin;
 
               name = "wordpress-sqlite";
-              buildInputs = [
-                wp-cli
-              ];
 
               src = builtins.path {
                 path = ./src;
