@@ -44,13 +44,11 @@
                 cp -r $wordpress/* $out/build
                 chmod -R 777 $out/build
                 cp -r $src/database $out/build/wp-content/database
-                cp -r $wordpress_SQLitePlugin $out/build/wp-content/plugins/sqlite-database-integration     
-                
-                chmod -R 777 $out/build
-                cp $out/build/wp-content/plugins/sqlite-database-integration/db.copy $out/build/wp-content/db.php
+                cp -r $wordpress_SQLitePlugin $out/build/wp-content/plugins/sqlite-database-integration
 
-            #    mv $out/build/wp-content/plugins/sqlite-database-integration/wp-includes/sqlite $out/build/wp-includes/sqlite
-            #    rm -rf $out/build/wp-content/plugins/sqlite-database-integration/wp-content
+                chmod -R 777 $out/build
+                cp $src/wp-config.php.copy $out/build/wp-config.php
+                cp $out/build/wp-content/plugins/sqlite-database-integration/db.copy $out/build/wp-content/db.php
 
                 tar -czf $out/wordpress-sqlite.tar.gz -C $out/build .
                 rm -rf $out/build
