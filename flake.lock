@@ -37,9 +37,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs",
-        "wordpress": "wordpress",
-        "wordpress_SQLitePlugin": "wordpress_SQLitePlugin"
+        "nixpkgs": "nixpkgs"
       }
     },
     "systems": {
@@ -55,32 +53,6 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
-      }
-    },
-    "wordpress": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-qNVbo2RGrHEmqEjP9wZ4rQJujFGNbXilCmtCceQVSNU=",
-        "type": "tarball",
-        "url": "https://wordpress.org/wordpress-6.4.2.tar.gz?narHash=sha256-qNVbo2RGrHEmqEjP9wZ4rQJujFGNbXilCmtCceQVSNU="
-      },
-      "original": {
-        "narHash": "sha256-qNVbo2RGrHEmqEjP9wZ4rQJujFGNbXilCmtCceQVSNU=",
-        "type": "tarball",
-        "url": "https://wordpress.org/wordpress-6.4.2.tar.gz?narHash=sha256-qNVbo2RGrHEmqEjP9wZ4rQJujFGNbXilCmtCceQVSNU="
-      }
-    },
-    "wordpress_SQLitePlugin": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-fLn8NHMqqX8ksCR/sCyNE/r8Twpg0Ws2ZFfsv+4ku7Q=",
-        "type": "tarball",
-        "url": "https://github.com/davidnuon/sqlite-database-integration/archive/refs/tags/2.1.6.tar.gz?narHash=sha256-fLn8NHMqqX8ksCR%2fsCyNE%2fr8Twpg0Ws2ZFfsv+4ku7Q="
-      },
-      "original": {
-        "narHash": "sha256-fLn8NHMqqX8ksCR/sCyNE/r8Twpg0Ws2ZFfsv+4ku7Q=",
-        "type": "tarball",
-        "url": "https://github.com/davidnuon/sqlite-database-integration/archive/refs/tags/2.1.6.tar.gz?narHash=sha256-fLn8NHMqqX8ksCR%2fsCyNE%2fr8Twpg0Ws2ZFfsv+4ku7Q="
       }
     }
   },
