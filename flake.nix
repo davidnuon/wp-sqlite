@@ -51,6 +51,9 @@
 
             #    mv $out/build/wp-content/plugins/sqlite-database-integration/wp-includes/sqlite $out/build/wp-includes/sqlite
             #    rm -rf $out/build/wp-content/plugins/sqlite-database-integration/wp-content
+
+                tar -czf $out/wordpress-sqlite.tar.gz -C $out/build .
+                rm -rf $out/build
               '';
 
               installPhase = ''
