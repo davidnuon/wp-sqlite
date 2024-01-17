@@ -32,18 +32,17 @@
  * @since 2.6.0
  */
 
- // TODO: Change with envvars
-define( 'AUTH_KEY',          '6&%K{%91h#^u^t]OnaAnx3@fGf%sWK57.#uP[f1ZU1QD7fByyT3&cd-3,SY7Ia:=' );
-define( 'SECURE_AUTH_KEY',   'D]|Kbw-@D|W]TA9#,X4nhI2JZrqs|8[mw_m8^xk5` 8TJEl9Tb|~Uk|lN:iXlmri' );
-define( 'LOGGED_IN_KEY',     'Gx&elKE#s/Ks+t/0x-olChSj~5]o7#lNg#.,p6dSQZ&f$Kd2*;OCl8+kK9>oanFX' );
-define( 'NONCE_KEY',         'mW `vkKmF]0[ cfd&(YwX]()BrZM:@Xl7g!G%Zs?arxmAbVgkXL5GM0eb8t$N2t!' );
-define( 'AUTH_SALT',         'D</My:xt^f:M2*W!K(e<3v!NT_mLTND`72Z}-9Q;00G4JGf9rNT~G%uS$~)8AOSS' );
-define( 'SECURE_AUTH_SALT',  'v3z(w>eO%aUy0);/wSFP+]!45AuI:I?Zxi$e9b~bo*[-}kLe][;sb$h/N%A929R]' );
-define( 'LOGGED_IN_SALT',    'HSCNSSY3%bcQD/*Vw9wx6a&hO#+[?~+$0Bee+O;v&Kbv~r=$z,KOOiMa~<CK$]Rh' );
-define( 'NONCE_SALT',        '=[#yN?%^v76L79F*}BiwM?iMZ%eIhi%U]oK0>77LyDJ+Bpq(fl~0IEG)Xju~OM5?' );
-define( 'WP_CACHE_KEY_SALT', '/iFg!]qOk,;ZU:iwE}*,iKGeL1PpE{e<eH;h1=sCYb4~Eq&Mnu~?UMyY~~@|cLsg' );
-
-
+ define( 'AUTH_KEY',          getenv('AUTH_KEY', 'fixme'));
+ define( 'SECURE_AUTH_KEY',   getenv('SECURE_AUTH_KEY', 'fixme'));
+ define( 'LOGGED_IN_KEY',     getenv('LOGGED_IN_KEY', 'fixme'));
+ define( 'NONCE_KEY',         getenv('NONCE_KEY', 'fixme'));
+ define( 'AUTH_SALT',         getenv('AUTH_SALT', 'fixme'));
+ define( 'SECURE_AUTH_SALT',  getenv('SECURE_AUTH_SALT', 'fixme'));
+ define( 'LOGGED_IN_SALT',    getenv('LOGGED_IN_SALT', 'fixme'));
+ define( 'NONCE_SALT',        getenv('NONCE_SALT', 'fixme'));
+ define( 'WP_CACHE_KEY_SALT', getenv('WP_CACHE_KEY_SALT', 'fixme'));
+ 
+ 
 /**#@-*/
 
 /**
