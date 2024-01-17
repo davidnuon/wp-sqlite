@@ -1,0 +1,32 @@
+name: Build 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    # Recommended if you intend to make multiple deployments in quick succession.
+    concurrency: ci-${{ github.ref }} 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - uses: DeterminateSystems/nix-installer-action@v4
+      - uses: DeterminateSystems/magic-nix-cache-action@v2
+
+      - name: Build
+        run: |
+          nix build
+
+      - name: Copy build result
+        run: |
+          cp -rv $(readlink -f result) out
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: wordpress-sqlite
+          path: out/**
